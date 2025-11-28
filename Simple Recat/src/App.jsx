@@ -5,6 +5,7 @@ import './App.css'
 import ToDo from './Todo'
 import Singer from './Singer'
 import Actor from './Actor'
+import Library from './Library'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,9 +18,21 @@ function App() {
     {id: 5,name: 'Tom Hanks', age: 64, bestMovie: 'Forrest Gump'}
   ]
 
+  const books = [
+    {id: 1, title: 'To Kill a Mockingbird', author: 'Harper Lee'},
+    {id: 2, title: '1984', author: 'George Orwell'},
+    {id: 3, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald'},
+    {id: 4, title: 'The Catcher in the Rye', author: 'J.D. Salinger'},
+    {id: 5, title: 'Physics Fundamentals', author: 'David Halliday'}
+  ]
+
   return (
     <>
       <h1>Simple React</h1>
+      <Library books = {books}></Library>
+
+      <h2>Actors List:</h2>
+
       {
         actors.map(actor => <Actor actor={actor} key={actor.id}></Actor>)
       }
