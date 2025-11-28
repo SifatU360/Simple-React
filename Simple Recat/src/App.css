@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.todo{
+  max-width: 600px;
+  margin: 2rem auto;
+  border: #61dafbaa 2px solid;
+  border-radius: 10px;
+  padding: 1rem;
+}
