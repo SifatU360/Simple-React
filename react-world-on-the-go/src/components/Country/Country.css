@@ -1,0 +1,10 @@
+.country{
+    border: 2px solid purple;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.country-visited{
+    background-color: lightgreen;
+}
