@@ -1,0 +1,122 @@
+/* Reset: keep this minimal so component styles control visuals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme variables for the drinks area */
+:root{
+    --card-bg: rgba(255,255,255,0.52);
+    --muted: #6b7280;
+    --accent: #0ea5a4;
+    --accent-600: #089e9d;
+    --radius: 14px;
+    --page-max-width: 1200px;
+}
+
+/* Page wrapper (optional): centers content and gives breathing room */
+.drinks-page{
+    min-height: 100vh;
+    justify-content: center;
+    /* ensure the page content is offset so the sticky header doesn't overlap */
+    padding: calc(var(--header-height) + 20px) 18px 28px;
+    background: linear-gradient(180deg, #f6f8fb 0%, #eef2f8 100%);
+}
+
+/* Header / Controls */
+.drinks-header{
+    width: 100%;
+    max-width: var(--page-max-width);
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 12px;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.drinks-header__title h1{
+    font-size: 1.4rem;
+    margin: 0 0 4px 0;
+    color: #071126;
+}
+.drinks-subtitle{
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.drinks-header__controls{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search input{
+    min-width: 220px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(12,34,56,0.06);
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(6px);
+    outline: none;
+    font-size: 0.95rem;
+}
+.search input:focus{ box-shadow: 0 4px 18px rgba(2,6,23,0.06) }
+
+.select{
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(12,34,56,0.06);
+    background: rgba(255,255,255,0.62);
+}
+
+.empty{
+    width: 100%;
+    text-align: center;
+    padding: 40px 12px;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.drinks-main{ width:100%; max-width: var(--page-max-width); margin: 0 auto }
+
+.drinks-footer{
+    width: 100%;
+    padding: 18px 12px 40px;
+    display: flex;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Grid that contains the Drink cards. Keep it generic: `Drinks.jsx` uses `className='card'` */
+.card{
+    width: 100%;
+    max-width: var(--page-max-width);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    align-items: start;
+    justify-items: center;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+/* Helper when you want a tighter centered grid */
+.card--centered{ justify-content: center }
+
+/* If you ever need a single-row carousel style */
+.card--row{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+/* Small responsive tweak */
+@media (max-width: 480px){
+    .card{ gap: 12px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Mineral Water 1L",
+    "price": 25,
+    "category": "Water",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/mineral-water-bottle-ad-banner-flask-with-drink_107791-2565.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Sparkling Water",
+    "price": 40,
+    "category": "Water",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/sparkling-water-bottle-ad-banner-flask-with-drink_107791-2566.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Lemon Juice 500ml",
+    "price": 55,
+    "category": "Juice",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/lemon-juice-bottle-ad-banner-flask-with-drink_107791-2567.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Orange Juice 500ml",
+    "price": 50,
+    "category": "Juice",
+    "type": "Cold",
+    "image": "https://img.freepik.com/premium-psd/bottle-juice-with-orange-juice-top_844028-147.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Apple Juice 1L",
+    "price": 70,
+    "category": "Juice",
+    "type": "Cold",
+    "image": "data:image/jpeg;base64,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"
+  },
+  {
+    "id": 6,
+    "name": "Energy Drink 250ml",
+    "price": 90,
+    "category": "Energy Drink",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/energy-drink-can-ad-banner-flask-with-drink_107791-2570.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Sports Drink",
+    "price": 65,
+    "category": "Energy Drink",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/sports-drink-bottle-ad-banner-flask-with-drink_107791-2571.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Cola 500ml",
+    "price": 45,
+    "category": "Soft Drink",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/cola-bottle-ad-banner-flask-with-drink_107791-2572.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Iced Tea Lemon",
+    "price": 55,
+    "category": "Tea",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/iced-tea-bottle-ad-banner-flask-with-drink_107791-2573.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Milkshake Chocolate",
+    "price": 80,
+    "category": "Milkshake",
+    "type": "Cold",
+    "image": "https://img.freepik.com/free-vector/chocolate-milkshake-bottle-ad-banner-flask-with-drink_107791-2574.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 11,
+    "name": "Hot Coffee",
+    "price": 60,
+    "category": "Coffee",
+    "type": "Hot",
+    "image": "https://img.freepik.com/free-vector/hot-coffee-cup-ad-banner-flask-with-drink_107791-2575.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Hot Milk Tea",
+    "price": 30,
+    "category": "Tea",
+    "type": "Hot",
+    "image": "https://img.freepik.com/free-vector/hot-milk-tea-cup-ad-banner-flask-with-drink_107791-2576.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 13,
+    "name": "Green Tea",
+    "price": 25,
+    "category": "Tea",
+    "type": "Hot",
+    "image": "https://img.freepik.com/free-vector/green-tea-cup-ad-banner-flask-with-drink_107791-2577.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 14,
+    "name": "Cappuccino",
+    "price": 90,
+    "category": "Coffee",
+    "type": "Hot",
+    "image": "https://img.freepik.com/free-vector/cappuccino-coffee-cup-ad-banner-flask-with-drink_107791-2578.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 15,
+    "name": "Hot Chocolate",
+    "price": 85,
+    "category": "Chocolate Drink",
+    "type": "Hot",
+    "image": "https://img.freepik.com/free-vector/hot-chocolate-cup-ad-banner-flask-with-drink_107791-2579.jpg?semt=ais_hybrid&w=740&q=80"
+  }
+]

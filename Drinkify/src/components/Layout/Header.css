@@ -1,0 +1,54 @@
+.app-header{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.66) 0%, rgba(255,255,255,0.48) 100%);
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 6px 18px rgba(6,10,24,0.06);
+}
+
+.app-header__brand{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  max-width: var(--page-max-width);
+  width: 100%;
+}
+
+.app-logo{ border-radius: 8px }
+.brand-title{ font-weight: 700; font-size: 1.05rem; color: var(--text)  color(srgb red green blue)}
+.brand-sub{ font-size: 0.82rem; color: var(--muted) }
+
+/* right side actions (profile, cart) */
+.app-header__actions{
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.action-btn{
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(12,34,56,0.06);
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.action-btn svg{opacity:0.9}
+.action-btn:hover{
+  background: rgba(255,255,255,0.72);
+  box-shadow: 0 4px 18px rgba(2,6,23,0.06);
+}
+.head{
+    color: black;
+}
