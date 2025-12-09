@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Drink.css';
 
-const Drink = ({ drink }) => {
+const Drink = ({ drink, handleAddToCart }) => {
     const [loaded, setLoaded] = useState(false);
     const [errored, setErrored] = useState(false);
 
@@ -48,7 +48,7 @@ const Drink = ({ drink }) => {
                 <p className="drink-card__price">${parseFloat(drink.price).toFixed(2)}</p>
 
                 <div className="drink-card__actions">
-                    <button className="btn btn--primary" type="button">Add to cart</button>
+                    <button className="btn btn--primary" type="button" onClick={() => handleAddToCart(drink)}>Add to cart</button>
                     <button className="btn btn--ghost" type="button" aria-label={`More info about ${drink.name}`}>Details</button>
                 </div>
             </div>

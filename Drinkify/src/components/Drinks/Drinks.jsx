@@ -1,6 +1,8 @@
-import React, { use, useState, useMemo } from 'react';
+import React, { use, useState, useMemo, useEffect } from 'react';
 import Drink from '../Drink/Drink';
 import './Drinks.css';
+import { addToStoredCart, getStoreCart, removeFromCart } from '../../utilities/localStorage';
+import Cart from '../Cart/Cart';
 
 const Drinks = ({ drinkPromise }) => {
     const rawDrinks = use(drinkPromise);
@@ -8,6 +10,47 @@ const Drinks = ({ drinkPromise }) => {
     const [query, setQuery] = useState('');
     const [category, setCategory] = useState('All');
     const [sort, setSort] = useState('featured');
+
+    const [cart, setCart] = useState([]);
+    // useEffect
+    useEffect(() => {
+        const storedCartIds = getStoreCart();
+        // console.log(storedCartIds, bottles);
+
+        const storedCart = [];
+
+        for (const id of storedCartIds) {
+            // console.log(id);
+            const cartBottle = drinks.find(drink => drink.id === id);
+            if (cartBottle) {
+                storedCart.push(cartBottle);
+            }
+        }
+
+        console.log('stored cart', storedCart);
+        setCart(storedCart);
+
+    }, [drinks])
+
+
+    const handleAddToCart = (bottle) => {
+        // console.log('bottle will be added to the cart', bottle);
+        const newCart = [...cart, bottle];
+        setCart(newCart);
+
+        // save the bottle id in the storage
+        addToStoredCart(bottle.id);
+    }
+
+    const handleRemoveFromCart = id => {
+        console.log('remove item from the cart', id)
+
+        const remainingCart = cart.filter(bottle => bottle.id !== id);
+        setCart(remainingCart);
+        removeFromCart(id);
+    }
+
+    // console.log(bottles);
 
     const categories = useMemo(() => {
         const setC = new Set(drinks.map(d => d.category).filter(Boolean));
@@ -37,6 +80,8 @@ const Drinks = ({ drinkPromise }) => {
                     <p className="drinks-subtitle">Discover curated beverages — filter, sort and preview.</p>
                 </div>
 
+                <p>Added to cart: {cart.length}</p>
+                <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart}></Cart>
                 <div className="drinks-header__controls">
                     <label className="search">
                         <input
@@ -67,7 +112,7 @@ const Drinks = ({ drinkPromise }) => {
                        <div className="empty">No drinks found.</div>
                    ) : (
                         filtered.map(drink => (
-                            <Drink key={drink.id} drink={drink} />
+                            <Drink key={drink.id} drink={drink} handleAddToCart={handleAddToCart}/>
                         ))
                    )}
                 </div>
